@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+    font-family: 'Lora', serif;
+    background-color: #fdf6e3; /* Creamy background - classic Vedic scroll feel */
+    color: #5c3d2e; /* Deep brown for text */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for longer forms */
+    min-height: 100vh;
+    background-image: url('images/vedic_background.png'); /* Optional: a subtle repeating Vedic pattern */
+    background-size: cover; /* Or 'repeat' if it's a pattern */
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: rgba(255, 248, 220, 0.9); /* Slightly transparent cornsilk/ivory */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 700px; /* Adjust as needed */
+    border: 2px solid #c8a071; /* Gold-ish border */
+}
+
+/* Header Styles */
+.vedic-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d4b996; /* Lighter gold separator */
+}
+
+.vedic-header h1 {
+    font-family: 'Playfair Display', serif;
+    color: #8c5a2b; /* Darker, richer brown/maroon for heading */
+    font-size: 2.8em;
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.vedic-header .subtitle {
+    font-size: 1.1em;
+    color: #7a5c50;
+    font-style: italic;
+}
+
+.header-symbol { /* If you add an image */
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Form Styles */
+#horoscopeForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-full { /* For single column items within the grid parent if needed, or use outside */
+    grid-column: 1 / -1; /* Span full width if inside a grid */
+}
+
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #7f4f24; /* Dark orange/brown */
+    font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="time"] {
+    padding: 12px 15px;
+    border: 1px solid #d4b996; /* Light gold border */
+    border-radius: 8px;
+    background-color: #fffaf0; /* Floral white - very light cream */
+    font-family: 'Lora', serif;
+    font-size: 1em;
+    color: #5c3d2e;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #c8a071; /* Darker gold on focus */
+    box-shadow: 0 0 8px rgba(200, 160, 113, 0.5);
+}
+
+/* Button Styles */
+.vedic-button {
+    background: linear-gradient(145deg, #e57300, #c85a00); /* Saffron/Orange gradient */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: center; /* Center button if form is flex column */
+    margin-top: 15px;
+}
+
+.vedic-button:hover {
+    background: linear-gradient(145deg, #c85a00, #b04e00);
+    transform: translateY(-2px);
+}
+
+.vedic-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Messages */
+.form-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+.form-message.success {
+    background-color: #e6ffed;
+    color: #276749;
+    border: 1px solid #9ae6b4;
+}
+.form-message.error {
+    background-color: #fed7d7;
+    color: #c53030;
+    border: 1px solid #feb2b2;
+}
+
+/* Footer Styles */
+.vedic-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #d4b996;
+    font-size: 0.9em;
+    color: #7a5c50;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    .vedic-header h1 {
+        font-size: 2em;
+    }
+    .form-grid {
+        grid-template-columns: 1fr; /* Stack fields on smaller screens */
+    }
+    .vedic-button {
+        width: 100%;
+    }
+}
