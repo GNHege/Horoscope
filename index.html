@@ -1,33 +1,67 @@
-<form id="horoscopeForm">
-    <div class="form-grid">
-        <div class="form-group">
-            <label for="Name">Name:</label>
-            <input type="text" id="Name" name="Name" required>
-        </div>
-        <div class="form-group">
-            <label for="FatherName">Father's Name:</label>
-            <input type="text" id="FatherName" name="FatherName" required>
-        </div>
-        <div class="form-group">
-            <label for="MotherName">Mother's Name:</label>
-            <input type="text" id="MotherName" name="MotherName" required>
-        </div>
-        <div class="form-group">
-            <label for="Gothra">Gothra:</label>
-            <input type="text" id="Gothra" name="Gothra">
-        </div>
-        <div class="form-group">
-            <label for="DoB">Date of Birth (DoB):</label>
-            <input type="date" id="DoB" name="DoB" required>
-        </div>
-        <div class="form-group">
-            <label for="ToB">Time of Birth (ToB):</label>
-            <input type="time" id="ToB" name="ToB" required>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedic Horoscope Form</title>
+    <!-- Google Fonts for Lora and Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Link to style.css - ensure this file is in the same directory as index.html -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="vedic-header">
+            <h1>Horoscope in just 2 minutes!</h1>
+            <p class="subtitle">Enter your details below for insightful predictions.</p>
+        </header>
+
+        <form id="horoscopeForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="Name">Name:</label>
+                    <input type="text" id="Name" name="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="FatherName">Father's Name:</label>
+                    <input type="text" id="FatherName" name="FatherName" required>
+                </div>
+                <div class="form-group">
+                    <label for="MotherName">Mother's Name:</label>
+                    <input type="text" id="MotherName" name="MotherName" required>
+                </div>
+                <div class="form-group">
+                    <label for="Gothra">Gothra:</label>
+                    <input type="text" id="Gothra" name="Goth raffa">
+                </div>
+                <div class="form-group">
+                    <label for="DoB">Date of Birth (DoB):</label>
+                    <input type="date" id="DoB" name="DoB" required>
+                </div>
+                <div class="form-group">
+                    <label for="ToB">Time of Birth (ToB):</label>
+                    <input type="time" id="ToB" name="ToB" required>
+                </div>
+            </div> <!-- End of form-grid -->
+
+            <div class="form-group form-group-full">
+                <label for="PoB">Place of Birth (PoB - Taluk/City):</label>
+                <input type="text" id="PoB" name="PoB" required>
+            </div>
+
+            <button type="submit" id="submitButton" class="vedic-button">Submit Details</button>
+
+            <div id="formMessage" class="form-message"></div>
+        </form>
+
+        <footer class="vedic-footer">
+            © 2025 Your Vedic Astrology Portal. All rights reserved.
+        </footer>
     </div>
-    <div class="form-group form-group-full">
-        <label for="PoB">Place of Birth (PoB - Taluk/City):</label>
-        <input type="text" id="PoB" name="PoB" requiredDirty>
-    </div>
-    <button type="submit" id="submitButton" class="vedic-button">Submit Details</button>
-</form>
+
+    <!-- Link to script.js - ensure this file is in the same directory as index.html -->
+    <script src="script.js"></script>
+</body>
+</html>
